@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>PHPMailer</title>
+    <style>
+input[type=text], select {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+#body{
+    width: 300%;
+    height: 600%;
+}
+input[type=submit] {
+  width: 100%;
+  background-color: #4CAF50;
+  color: white;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+input[type=submit]:hover {
+  background-color: #45a049;
+}
+
+div {
+  border-radius: 5px;
+  background-color: #f2f2f2;
+  padding: 20px;
+}
+</style>
+</head>
+<body>
+    <div>
+        <form action="mail.php" method="POST">
+            Sender's Name:
+            <br>
+            <input name="FromName" type="text"/>
+            <br><br>
+            Sender's Email Address:
+            <br>
+            <input name="FromAddress" type="text"/>
+            <br><br>
+            Recipient's Address:
+            <br>
+            <input name="ToAddress" type="text"/>
+            <br><br>
+            Subject:
+            <br>
+            <input name="Subject" type="text"/>
+            <br><br>
+            Body:
+            <br>
+            <textarea name="Body" rows="10" cols="150"></textarea>
+            <br><br>
+            Filename:
+            <br>
+            <input name="FilePath" type="text"/>
+            <br><br>
+            <input type="submit" value="Send Email" />
+        </form>
+    </div>
+</body>
+</html>
